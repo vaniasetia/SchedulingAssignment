@@ -2,6 +2,7 @@
 #define FCFS_H
 
 #include <queue>
+#include "Process.h"
 
 class FCFS {
 public:
@@ -11,7 +12,10 @@ public:
 
 private:
     int currentTime = 0;
-    // TODO: add any required data structures here
+    std::queue<Process> process_queue;
+    
 };
+
+
 
 #endif // FCFS_H

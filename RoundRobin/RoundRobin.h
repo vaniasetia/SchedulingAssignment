@@ -2,6 +2,7 @@
 #define ROUNDROBIN_H
 
 #include <queue>
+#include "Process.h"
 
 class RoundRobin {
 public:
@@ -14,7 +15,8 @@ private:
     int quantum;
     int currentTime = 0;
     int currentQuantum = 0;
-    // TODO: add any required data structures here
+    std::queue<Process> processQueue;
 };
+
 
 #endif // ROUNDROBIN_H

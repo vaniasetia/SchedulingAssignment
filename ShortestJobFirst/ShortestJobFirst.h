@@ -3,6 +3,7 @@
 
 #include <vector>
 #include <algorithm>
+#include "Process.h"
 
 class ShortestJobFirst {
 public:
@@ -12,7 +13,7 @@ public:
 
 private:
     int currentTime = 0;
-    // TODO: add any required data structures here
+    std::vector<Process> processQueue; //a pq or sorted vetor
 };
 
 #endif // SHORTESTJOBFIRST_H
