@@ -3,6 +3,7 @@
 
 #include <vector>
 #include <algorithm>
+#include <queue>
 #include "Process.h"
 
 class ShortestJobRemainingFirst {
@@ -13,7 +14,8 @@ public:
 
 private:
     int currentTime = 0;
-    std::vector<Process> processQueue;
+
+    std::priority_queue <Process, std::vector<Process>, Process::compareProcesses> processQueue; // Min-heap
 };
 
 #endif // SHORTESTJOBREMAININGFIRST_H
