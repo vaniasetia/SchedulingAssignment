@@ -2,7 +2,7 @@
 
 void ShortestJobFirst::insertProcess(int id, int timeRequired) {
     processQueue.push_back(Process(id, timeRequired));
-    sort(processQueue.begin(), processQueue.end(), Process::compareProcesses);// make the queue sorted so that shortrest p is at front
+    std::sort(processQueue.rbegin(), processQueue.rend(), std::greater<Process>()); // Sort the queue so that the shortest process is at the front
 
     return;
 }

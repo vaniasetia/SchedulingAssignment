@@ -10,12 +10,11 @@ class ShortestJobRemainingFirst {
 public:
     void insertProcess(int id, int timeRequired);
     int getCurrentProcess();
-    void incrementTime();
+    void incrementTime();  
 
 private:
     int currentTime = 0;
-
-    std::priority_queue <Process, std::vector<Process>, Process::compareProcesses> processQueue; // Min-heap
+    std::priority_queue<Process, std::vector<Process>, std::greater<Process>> processQueue;
 };
 
 #endif // SHORTESTJOBREMAININGFIRST_H
